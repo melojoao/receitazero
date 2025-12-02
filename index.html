@@ -452,11 +452,13 @@
         /* Pricing/CTA Section */
         .pricing {
             padding: 100px 0;
-            text-align: center;
             background-color: var(--primary-color);
             color: var(--white);
             position: relative;
             overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .pricing::before {
@@ -470,25 +472,152 @@
             opacity: 0.1;
         }
 
-        .pricing-content {
+        .pricing-card {
+            background: var(--white);
+            border-radius: 30px;
+            padding: 50px;
+            max-width: 1000px;
+            margin: 0 auto;
             position: relative;
             z-index: 1;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            color: var(--text-color);
+        }
+
+        .pricing-image {
+            position: relative;
+        }
+
+        .pricing-image img {
+            width: 100%;
+            border-radius: 20px;
+            /* box-shadow: var(--shadow); */
+            animation: float 6s ease-in-out infinite;
+        }
+
+        .pricing-info {
+            text-align: left;
+        }
+
+        .badge-best-seller {
+            background-color: #25D366;
+            /* WhatsApp Green-ish or similar bright green */
+            color: #000;
+            font-weight: 800;
+            padding: 8px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            margin-bottom: 20px;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 4px 10px rgba(37, 211, 102, 0.3);
+        }
+
+        .pricing-info h2 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            color: #1a1a1a;
+        }
+
+        .pricing-info h2 span {
+            color: var(--primary-color);
+        }
+
+        .pricing-sub {
+            font-size: 1.1rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .benefits-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .benefits-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+            color: #444;
+        }
+
+        .benefits-list li i {
+            color: #25D366;
+            /* Green checkmark */
+            font-size: 1.2rem;
+        }
+
+        .price-container {
+            margin-bottom: 30px;
         }
 
         .price-tag {
-            font-size: 5rem;
+            font-size: 4rem;
             font-weight: 800;
-            color: var(--primary-color);
-            margin: 20px 0;
-            font-family: 'Playfair Display', serif;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-            letter-spacing: -2px;
+            color: var(--accent-color);
+            /* Yellow/Gold */
+            font-family: 'Outfit', sans-serif;
+            line-height: 1;
         }
 
-        .price-sub {
+        .price-old {
             font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 40px;
+            text-decoration: line-through;
+            color: #999;
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        .btn-pricing {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            font-weight: 800;
+            padding: 18px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-block;
+            transition: var(--transition);
+            font-size: 1.2rem;
+            box-shadow: 0 10px 20px rgba(255, 187, 0, 0.3);
+            width: 100%;
+            text-align: center;
+            text-transform: uppercase;
+        }
+
+        .btn-pricing:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 187, 0, 0.4);
+            background-color: #ffcc33;
+        }
+
+        .secure-text {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.85rem;
+            color: #888;
+        }
+
+        @media (max-width: 968px) {
+            .pricing-card {
+                grid-template-columns: 1fr;
+                padding: 30px;
+                text-align: center;
+            }
+
+            .pricing-info {
+                text-align: center;
+            }
+
+            .benefits-list li {
+                justify-content: center;
+            }
         }
 
         /* Footer */
@@ -1074,18 +1203,34 @@
         </div>
     </section>
     <!-- Pricing Section -->
-    <section class="pricing" id="pricing" style="background-color: var(--white); color: var(--text-color);">
-        <div class="container pricing-content reveal">
-            <div style="max-width: 800px; margin: 0 auto;"> <img src="mockup_ebooks.png"
-                    alt="Pacote Completo de Receitas"
-                    style="margin-bottom: 30px; animation: float 6s ease-in-out infinite;"> </div>
-            <h2>Desvende os Segredos dos Bolos Sem Glúten</h2>
-            <p>Receba instantaneamente por E-mail e Whatsapp após o pagamento.</p>
-            <div class="price-tag">R$14,90</div>
-            <div class="price-sub">Oferta especial por tempo limitado</div> <a
-                href="https://pay.cakto.com.br/3e48fg9_673711" class="btn">COMPRAR AGORA</a>
-            <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">Acesso Imediato â€¢ Compra
-                Segura</p>
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <div class="pricing-card reveal">
+                <div class="pricing-image">
+                    <img src="mockup_ebooks.png" alt="Pacote Completo de Receitas">
+                </div>
+                <div class="pricing-info">
+                    <div class="badge-best-seller">Mais Vendido</div>
+                    <h2>Pacote Completo<br><span>Receitas Sem Culpa</span></h2>
+                    <p class="pricing-sub">Tudo o que você precisa para comer bem sem sair da dieta.</p>
+
+                    <ul class="benefits-list">
+                        <li><i class="fas fa-check-circle"></i> 100 Receitas Testadas</li>
+                        <li><i class="fas fa-check-circle"></i> Sem Glúten e Sem Açúcar</li>
+                        <li><i class="fas fa-check-circle"></i> Acesso Vitalício</li>
+                        <li><i class="fas fa-check-circle"></i> 3 Bônus Exclusivos</li>
+                        <li><i class="fas fa-check-circle"></i> Garantia de 15 Dias</li>
+                    </ul>
+
+                    <div class="price-container">
+                        <!-- <span class="price-old">R$ 97,00</span> -->
+                        <div class="price-tag">R$14,90</div>
+                    </div>
+
+                    <a href="https://pay.cakto.com.br/3e48fg9_673711" class="btn-pricing">COMPRAR AGORA</a>
+                    <p class="secure-text">Acesso Imediato &bull; Compra Segura</p>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Guarantee Section -->
