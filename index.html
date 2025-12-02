@@ -1,0 +1,1171 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <!-- Meta Pixel Code -->
+    <script>
+        !function (f, b, e, v, n, t, s) {
+            if (f.fbq) return; n = f.fbq = function () {
+                n.callMethod ?
+                    n.callMethod.apply(n, arguments) : n.queue.push(arguments)
+            };
+            if (!f._fbq) f._fbq = n; n.push = n; n.loaded = !0; n.version = '2.0';
+            n.queue = []; t = b.createElement(e); t.async = !0;
+            t.src = v; s = b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t, s)
+        }(window, document, 'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '1352856539261316');
+        fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=1352856539261316&ev=PageView&noscript=1" /></noscript>
+    <!-- End Meta Pixel Code -->
+
+    <!-- Meta Conversion API (CAPI) Trigger -->
+    <script>
+        (function () {
+            var eventName = 'PageView';
+            var eventSourceUrl = window.location.href;
+
+            fetch('/api/facebook-conversion', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    eventName: eventName,
+                    eventSourceUrl: eventSourceUrl
+                })
+            })
+                .then(response => response.json())
+                .then(data => console.log('CAPI Event sent:', data))
+                .catch(error => console.error('CAPI Error:', error));
+        })();
+    </script>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Receitas da Nutri - Bolos Sem Culpa</title>
+    <meta name="description"
+        content="Imagine poder comer bolo todos os dias sem culpa. Sem sair da dieta e ainda cuidando da sua saúde.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,600;1,600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary-color: #6a3321;
+            /* Brown from original */
+            --secondary-color: #89a687;
+            /* Sage Green from original */
+            --accent-color: #ffbb00;
+            /* Yellow/Gold from original */
+            --bg-color: #ffffff;
+            --text-color: #333333;
+            --light-bg: #f9f9f9;
+            --white: #ffffff;
+            --transition: all 0.3s ease;
+            --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            --radius: 16px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1,
+        h2,
+        h3,
+        h4 {
+            font-family: 'Playfair Display', serif;
+            color: var(--primary-color);
+            line-height: 1.2;
+        }
+
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Buttons */
+        .btn {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 16px 32px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(106, 51, 33, 0.3);
+            cursor: pointer;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(137, 166, 135, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+        }
+
+        .btn-secondary:hover {
+            background-color: #e5a800;
+        }
+
+        /* Header/Hero Section */
+        header {
+            padding: 20px 0;
+            position: absolute;
+            width: 100%;
+            z-index: 10;
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            padding-top: 80px;
+            background: radial-gradient(circle at top right, rgba(137, 166, 135, 0.1), transparent 40%);
+        }
+
+        .hero-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            gap: 30px;
+        }
+
+        .hero-badge {
+            background-color: #3e1e15;
+            color: #fff;
+            padding: 5px 15px;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero-text h1 span {
+            display: block;
+            font-size: 2.5rem;
+        }
+
+        .hero-text p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #666;
+            max-width: 500px;
+        }
+
+        .hero-image {
+            position: relative;
+            max-width: 600px;
+            width: 100%;
+            margin: 0 auto;
+        }
+
+        .hero-image img {
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+        }
+
+        .hero-benefits {
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            align-items: center;
+        }
+
+        .hero-benefit-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+
+        .hero-benefit-item i {
+            color: var(--white);
+            background: var(--secondary-color);
+            border-radius: 50%;
+            padding: 5px;
+            font-size: 0.8rem;
+        }
+
+        /* Features Section */
+        .features {
+            padding: 100px 0;
+            background-color: var(--white);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .feature-card {
+            background: var(--light-bg);
+            padding: 30px;
+            border-radius: var(--radius);
+            text-align: center;
+            transition: var(--transition);
+            border: 1px solid transparent;
+        }
+
+        .feature-card:hover {
+            background: var(--white);
+            box-shadow: var(--shadow);
+            border-color: var(--secondary-color);
+            transform: translateY(-10px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .feature-card h3 {
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Preview Section */
+        .preview {
+            padding: 100px 0;
+            background-color: #f7f5e0;
+            /* Light cream from original */
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .section-title p {
+            color: #666;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .gallery-item {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover {
+            transform: scale(1.02);
+        }
+
+        .gallery-img {
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .gallery-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .gallery-item:hover .gallery-img img {
+            transform: scale(1.1);
+        }
+
+        .gallery-info {
+            padding: 20px;
+        }
+
+        .gallery-info h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        .gallery-meta {
+            display: flex;
+            gap: 15px;
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 10px;
+        }
+
+        /* Author Section */
+        .author {
+            padding: 100px 0;
+            background: linear-gradient(to right, var(--white) 50%, var(--secondary-color) 50%);
+        }
+
+        .author-content {
+            display: flex;
+            align-items: center;
+            gap: 60px;
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 40px;
+            box-shadow: var(--shadow);
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        .author-img {
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .author-img img {
+            border-radius: var(--radius);
+        }
+
+        .author-text {
+            flex: 1;
+        }
+
+        .author-text h2 {
+            margin-bottom: 20px;
+            font-size: 2.5rem;
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+            background-color: var(--light-bg);
+        }
+
+        .testimonial-slider {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            text-align: center;
+        }
+
+        .testimonial-slide {
+            display: none;
+            animation: fadeEffect 1s;
+        }
+
+        .testimonial-slide.active {
+            display: block;
+        }
+
+        @keyframes fadeEffect {
+            from {
+                opacity: 0.4
+            }
+
+            to {
+                opacity: 1
+            }
+        }
+
+        .stars {
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .slider-nav button {
+            background: none;
+            border: 2px solid var(--secondary-color);
+            color: var(--secondary-color);
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .slider-nav button:hover {
+            background: var(--secondary-color);
+            color: var(--white);
+        }
+
+        /* Pricing/CTA Section */
+        .pricing {
+            padding: 100px 0;
+            text-align: center;
+            background-color: var(--primary-color);
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .pricing::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/food.png');
+            opacity: 0.1;
+        }
+
+        .pricing-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .price-tag {
+            font-size: 5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            margin: 20px 0;
+            font-family: 'Playfair Display', serif;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            letter-spacing: -2px;
+        }
+
+        .price-sub {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 0;
+            text-align: center;
+            background-color: #2c150e;
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+
+        /* Animations */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text p {
+                margin: 0 auto 30px;
+            }
+
+            .hero-image {
+                max-width: 500px;
+                height: 100%;
+                object-fit: cover;
+                transition: var(--transition);
+            }
+
+            .gallery-item:hover .gallery-img img {
+                transform: scale(1.1);
+            }
+
+            .gallery-info {
+                padding: 20px;
+            }
+
+            .gallery-info h3 {
+                margin-bottom: 10px;
+                color: var(--primary-color);
+            }
+
+            .gallery-meta {
+                display: flex;
+                gap: 15px;
+                font-size: 0.9rem;
+                color: #888;
+                margin-top: 10px;
+            }
+
+            /* Author Section */
+            .author {
+                padding: 100px 0;
+                background: linear-gradient(to right, var(--white) 50%, var(--secondary-color) 50%);
+            }
+
+            .author-content {
+                display: flex;
+                align-items: center;
+                gap: 60px;
+                background: var(--white);
+                border-radius: var(--radius);
+                padding: 40px;
+                box-shadow: var(--shadow);
+                max-width: 1000px;
+                margin: 0 auto;
+            }
+
+            .author-img {
+                flex: 1;
+                max-width: 400px;
+            }
+
+            .author-img img {
+                border-radius: var(--radius);
+            }
+
+            .author-text {
+                flex: 1;
+            }
+
+            .author-text h2 {
+                margin-bottom: 20px;
+                font-size: 2.5rem;
+            }
+
+            /* Testimonials Section */
+            .testimonials {
+                padding: 100px 0;
+                background-color: var(--light-bg);
+            }
+
+            .testimonial-slider {
+                max-width: 800px;
+                margin: 0 auto;
+                position: relative;
+                background: var(--white);
+                padding: 40px;
+                border-radius: var(--radius);
+                box-shadow: var(--shadow);
+                text-align: center;
+            }
+
+            .testimonial-slide {
+                display: none;
+                animation: fadeEffect 1s;
+            }
+
+            .testimonial-slide.active {
+                display: block;
+            }
+
+            @keyframes fadeEffect {
+                from {
+                    opacity: 0.4
+                }
+
+                to {
+                    opacity: 1
+                }
+            }
+
+            .stars {
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .slider-nav button {
+                background: none;
+                border: 2px solid var(--secondary-color);
+                color: var(--secondary-color);
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: var(--transition);
+            }
+
+            .slider-nav button:hover {
+                background: var(--secondary-color);
+                color: var(--white);
+            }
+
+            /* Pricing/CTA Section */
+            .pricing {
+                padding: 100px 0;
+                text-align: center;
+                background-color: var(--primary-color);
+                color: var(--white);
+                position: relative;
+                overflow: hidden;
+            }
+
+            .pricing::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: url('https://www.transparenttextures.com/patterns/food.png');
+                opacity: 0.1;
+            }
+
+            .pricing-content {
+                position: relative;
+                z-index: 1;
+            }
+
+            .price-tag {
+                font-size: 5rem;
+                font-weight: 800;
+                color: var(--primary-color);
+                margin: 20px 0;
+                font-family: 'Playfair Display', serif;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+                letter-spacing: -2px;
+            }
+
+            .price-sub {
+                font-size: 1.2rem;
+                opacity: 0.9;
+                margin-bottom: 40px;
+            }
+
+            /* Footer */
+            footer {
+                padding: 40px 0;
+                text-align: center;
+                background-color: #2c150e;
+                color: #aaa;
+                font-size: 0.9rem;
+            }
+
+            /* Animations */
+            .reveal {
+                opacity: 0;
+                transform: translateY(30px);
+                transition: all 0.8s ease;
+            }
+
+            .reveal.active {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text p {
+                margin: 0 auto 30px;
+            }
+
+            .hero-image {
+                max-width: 500px;
+                margin: 0 auto;
+            }
+
+            .author {
+                background: var(--light-bg);
+            }
+
+            .author-content {
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+
+        /* Guarantee Section */
+        .guarantee {
+            padding: 80px 0;
+            background-color: var(--white);
+        }
+
+        .guarantee-card {
+            background-color: #4a3b32;
+            border-radius: 30px;
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            color: #fff;
+            position: relative;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .guarantee-seal img {
+            width: 150px;
+            margin-top: -80px;
+            margin-bottom: 20px;
+        }
+
+        .guarantee-content h3 {
+            font-size: 2rem;
+            color: #fff;
+            margin-bottom: 10px;
+            line-height: 1.2;
+        }
+
+        .guarantee-content h3 span {
+            color: var(--accent-color);
+            font-weight: 800;
+            text-transform: uppercase;
+        }
+
+        .guarantee-content p {
+            font-size: 1rem;
+            margin-bottom: 10px;
+            opacity: 0.9;
+        }
+
+        /* Showcase Section */
+        .showcase {
+            padding: 80px 0;
+            background-color: var(--white);
+            color: #3e1e15;
+        }
+
+        .showcase .section-title h2 {
+            color: var(--primary-color);
+            font-size: 2rem;
+            line-height: 1.3;
+        }
+
+        .showcase .section-title h2 span {
+            color: #3e1e15;
+            font-weight: 800;
+        }
+
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .showcase-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            text-align: center;
+            padding-bottom: 25px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            border: 1px solid #f0f0f0;
+        }
+
+        .showcase-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+        }
+
+        .showcase-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: none;
+        }
+
+        .showcase-card p {
+            padding: 0 25px;
+            font-weight: 600;
+            font-size: 1.1rem;
+            color: #4a3b32;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text reveal">
+                    <span class="hero-badge">Sem Glúten</span>
+                    <h1>Receitas de Bolo<br><span>Para Comer Sem Culpa</span></h1>
+                </div>
+                <div class="hero-image reveal">
+                    <img src="https://media.atomicatpages.net/u/6P02bGv6l7Nw26kO4JL48xk2ISr1/Pictures/SpYwRp4769772.png"
+                        alt="Bolo Saudável Delicioso">
+                    <div class="hero-benefits">
+                        <div class="hero-benefit-item"><i class="fas fa-check"></i> Testadas e Aprovadas</div>
+                        <div class="hero-benefit-item"><i class="fas fa-check"></i> Sem leite e sem Açúcar</div>
+                        <div class="hero-benefit-item"><i class="fas fa-check"></i> Ingredientes Acessíveis</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>O que você vai encontrar?</h2>
+                <p>Receitas pensadas para o seu bem-estar sem abrir mão do sabor.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i class="fas fa-wheat-awn-circle-exclamation"></i></div>
+                    <h3>Sem Glúten</h3>
+                    <p>Receitas totalmente livres de glúten para sua segurança e leveza.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i class="fas fa-cow"></i></div>
+                    <h3>Sem Leite</h3>
+                    <p>Opções deliciosas sem lactose ou proteína do leite.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                    <h3>Sem Conservantes</h3>
+                    <p>Tudo natural,
+                        comida de verdade para nutrir seu corpo.</p>
+                </div>
+                <div class="feature-card reveal">
+                    <div class="feature-icon"><i class="fas fa-candy-cane"></i></div>
+                    <h3>Açúcar Opcional</h3>
+                    <p>Você decide se quer usar ou não,
+                        com alternativas saudáveis.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Preview Section -->
+    <section class="preview" id="preview" style="background-color: var(--white);">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>100 Receitas Inéditas</h2>
+                <p>Com foto real e passo a passo simples. Veja algumas delícias: </p>
+            </div>
+            <div class="gallery">
+                <!-- Item 1 -->
+                <div class="gallery-item reveal">
+                    <div class="gallery-img"> <img
+                            src="https://media.atomicatpages.net/u/6P02bGv6l7Nw26kO4JL48xk2ISr1/Pictures/Sgmgpt5860569.jpeg"
+                            alt="Bolo de Cenoura"> </div>
+                    <div class="gallery-info">
+                        <h3>Bolo de Cenoura Low Carb</h3>
+                        <p>Fofinho e delicioso, perfeito para o café da tarde.</p>
+                        <div class="gallery-meta"> <span><i class="far fa-clock"></i> 20 min</span> <span><i
+                                    class="fas fa-fire"></i> 120 kcal</span> </div>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="gallery-item reveal">
+                    <div class="gallery-img"> <img
+                            src="https://media.atomicatpages.net/u/6P02bGv6l7Nw26kO4JL48xk2ISr1/Pictures/nQPDqy1062597.jpeg"
+                            alt="Bolo Indiano"> </div>
+                    <div class="gallery-info">
+                        <h3>Bolo Indiano</h3>
+                        <p>Uma explosão de especiarias sem glúten.</p>
+                        <div class="gallery-meta"> <span><i class="far fa-clock"></i> 20 min</span>
+                            <span><i class="fas fa-fire"></i> 90 kcal</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="gallery-item reveal">
+                    <div class="gallery-img"> <img
+                            src="https://media.atomicatpages.net/u/6P02bGv6l7Nw26kO4JL48xk2ISr1/Pictures/PWavaf2196277.webp"
+                            alt="Bolo de Banana"> </div>
+                    <div class="gallery-info">
+                        <h3>Bolo de Banana</h3>
+                        <p>Feito na frigideira, prático e rápido.</p>
+                        <div class="gallery-meta"> <span><i class="far fa-clock"></i> 20 min</span>
+                            <span><i class="fas fa-fire"></i> 106 kcal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 50px;" class="reveal"> <a href="#pricing" class="btn">Ver Todas
+                    as Receitas</a> </div>
+        </div>
+    </section>
+    <!-- Bonus Section -->
+    <section class="bonus" style="background-color: var(--white); padding: 100px 0;">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Bônus Exclusivos</h2>
+                <p>Além das 100 receitas, você leva esses presentes especiais:</p>
+            </div>
+            <div class="gallery">
+                <!-- Bonus Item 1 -->
+                <div class="gallery-item reveal" style="border: 2px solid var(--accent-color);">
+                    <div class="gallery-img"> <img
+                            src="https://media.atomicatpages.net/u/6P02bGv6l7Nw26kO4JL48xk2ISr1/Pictures/oYGIQB6356860.webp"
+                            alt="Bolo de Limão"> </div>
+                    <div class="gallery-info"> <span
+                            style="background: var(--accent-color); color: var(--primary-color); padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">Bônus
+                            #1</span>
+                        <h3 style="margin-top: 10px;">Bolo de Limão Low Carb</h3>
+                        <p>Refrescante, feito no liquidificador.</p>
+                        <div class="gallery-meta"> <span><i class="far fa-clock"></i> 20 min</span>
+                            <span><i class="fas fa-fire"></i> 100 kcal</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bonus Item 2 -->
+                <div class="gallery-item reveal" style="border: 2px solid var(--accent-color);">
+                    <div class="gallery-img"> <img
+                            src="https://media.atomicatpages.net/u/6P02bGv6l7Nw26kO4JL48xk2ISr1/Pictures/xLHoJu2883918.webp"
+                            alt="Bolo Formigueiro"> </div>
+                    <div class="gallery-info"> <span
+                            style="background: var(--accent-color); color: var(--primary-color); padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">Bônus
+                            #2</span>
+                        <h3 style="margin-top: 10px;">Bolo Formigueiro</h3>
+                        <p>Apenas 5 ingredientes. Simples e delicioso.</p>
+                        <div class="gallery-meta"> <span><i class="far fa-clock"></i> 20 min</span>
+                            <span><i class="fas fa-fire"></i> 108 kcal</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Bonus Item 3 -->
+                <div class="gallery-item reveal" style="border: 2px solid var(--accent-color);">
+                    <div class="gallery-img"> <img
+                            src="https://media.atomicatpages.net/u/6P02bGv6l7Nw26kO4JL48xk2ISr1/Pictures/mRrDkb2829169.webp"
+                            alt="Bolo de Pistache"> </div>
+                    <div class="gallery-info"> <span
+                            style="background: var(--accent-color); color: var(--primary-color); padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">Bônus
+                            #3</span>
+                        <h3 style="margin-top: 10px;">Bolo de Pistache</h3>
+                        <p>Super rápido e sofisticado.</p>
+                        <div class="gallery-meta"> <span><i class="far fa-clock"></i> 19
+                                min</span> <span><i class="fas fa-fire"></i> 105 kcal</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Quem provou, aprovou !</h2>
+                <p>Veja o que nossas alunas estão dizendo sobre as receitas.</p>
+            </div>
+            <div class="testimonial-slider reveal">
+                <div class="testimonial-slide active">
+                    <img src="assets/testimonial1.png" alt="Depoimento 1" class="testimonial-img">
+                </div>
+                <div class="testimonial-slide">
+                    <img src="assets/testimonial2.png" alt="Depoimento 2" class="testimonial-img">
+                </div>
+                <div class="testimonial-slide">
+                    <img src="assets/testimonial3.png" alt="Depoimento 3" class="testimonial-img">
+                </div>
+                <div class="testimonial-slide">
+                    <img src="assets/testimonial4.png" alt="Depoimento 4" class="testimonial-img">
+                </div>
+                <div class="slider-nav"> <button class="prev-btn"><i class="fas fa-chevron-left"></i></button> <button
+                        class="next-btn"><i class="fas fa-chevron-right"></i></button> </div>
+            </div>
+        </div>
+    </section>
+    <!-- Showcase Section -->
+    <section class="showcase">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Essas e mais algumas <span>delícias</span> que você vai ter acesso pagando só
+                    <br><span>R$14,90</span>
+                </h2>
+            </div>
+            <div class="showcase-grid">
+                <!-- Cake 5: Chocolate -->
+                <div class="showcase-card reveal">
+                    <img src="assets/cake5.png" alt="Bolo de Chocolate">
+                    <p>Delicia de bolo de chocolate sem açúcar é a sugestão para o lanche</p>
+                </div>
+                <!-- Cake 2: Fruit -->
+                <div class="showcase-card reveal">
+                    <img src="assets/cake2.png" alt="Bolo de Frutas">
+                    <p>Bolo de Frutas Fit (Sem Gorduras, sem Glúten, sem Lactose e sem Açúcar)</p>
+                </div>
+                <!-- Cake 1: Cheesecake -->
+                <div class="showcase-card reveal">
+                    <img src="assets/cake1.png" alt="Cheesecake">
+                    <p>Cheesecake (Sem Glúten, sem Lactose e sem Açúcar)</p>
+                </div>
+                <!-- Cake 4: Four Milks -->
+                <div class="showcase-card reveal">
+                    <img src="assets/cake4.png" alt="Torta Quatro Leites">
+                    <p>Torta quatro leites (ZERO AÇÚCAR)</p>
+                </div>
+                <!-- Cake 3: Grandma's -->
+                <div class="showcase-card reveal">
+                    <img src="assets/cake3.png" alt="Bolo da Vovó">
+                    <p>Bolo da Vovó</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing" style="background-color: var(--white); color: var(--text-color);">
+        <div class="container pricing-content reveal">
+            <div style="max-width: 800px; margin: 0 auto;"> <img src="mockup_ebooks.png"
+                    alt="Pacote Completo de Receitas"
+                    style="margin-bottom: 30px; animation: float 6s ease-in-out infinite;"> </div>
+            <h2>Desvende os Segredos dos Bolos Sem Glúten</h2>
+            <p>Receba instantaneamente por E-mail e Whatsapp após o pagamento.</p>
+            <div class="price-tag">R$14,90</div>
+            <div class="price-sub">Oferta especial por tempo limitado</div> <a
+                href="https://pay.cakto.com.br/3e48fg9_673711" class="btn">COMPRAR AGORA</a>
+            <p style="margin-top: 20px; font-size: 0.9rem; opacity: 0.8;">Acesso Imediato â€¢ Compra
+                Segura</p>
+        </div>
+    </section>
+    <!-- Guarantee Section -->
+    <section class="guarantee">
+        <div class="container">
+            <div class="guarantee-card reveal">
+                <div class="guarantee-seal">
+                    <img src="assets/selo-garantia-15-dias.png" alt="Selo de Garantia 15 Dias">
+                </div>
+                <div class="guarantee-content">
+                    <h3>Experimente<br><span>Sem riscos</span></h3>
+                    <p>Satisfação garantida ou seu dinheiro de volta.</p>
+                    <p>Você tem até 15 dias para solicitar a devolução do valor pago pelo produto.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy;
+                2024 Receitinhas da Nutri. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    <!-- Scripts -->
+    <script> // Scroll Animation
+
+        function reveal() {
+            var reveals = document.querySelectorAll(".reveal");
+
+            for (var i = 0; i < reveals.length; i++) {
+                var windowHeight = window.innerHeight;
+                var elementTop = reveals[i].getBoundingClientRect().top;
+                var elementVisible = 150;
+
+                if (elementTop < windowHeight - elementVisible) {
+                    reveals[i].classList.add("active");
+                }
+            }
+        }
+
+        window.addEventListener("scroll", reveal);
+        // Trigger once on load
+        reveal();
+
+        // Testimonial Slider
+        let slideIndex = 0;
+        const slides = document.querySelectorAll(".testimonial-slide");
+        const prevBtn = document.querySelector(".prev-btn");
+        const nextBtn = document.querySelector(".next-btn");
+
+        function showSlides(n) {
+            if (n >= slides.length) {
+                slideIndex = 0
+            }
+
+            if (n < 0) {
+                slideIndex = slides.length - 1
+            }
+
+            slides.forEach(slide => slide.classList.remove("active"));
+            slides[slideIndex].classList.add("active");
+        }
+
+        function nextSlide() {
+            slideIndex++;
+            showSlides(slideIndex);
+        }
+
+        function prevSlide() {
+            slideIndex--;
+            showSlides(slideIndex);
+        }
+
+        if (prevBtn && nextBtn) {
+            prevBtn.addEventListener('click', prevSlide);
+            nextBtn.addEventListener('click', nextSlide);
+        }
+
+        // Auto play
+        setInterval(nextSlide, 5000);
+    </script>
+</body>
