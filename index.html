@@ -705,45 +705,50 @@
 
 
 
-        .benefits-list {
-            margin-bottom: 30px;
-            padding-left: 10px;
-        }
+        @media (max-width: 768px) {
+            .pricing-card {
+                flex-direction: column;
+            }
 
-        .benefits-list li {
-            font-size: 1rem;
-            justify-content: flex-start;
-        }
+            .benefits-list {
+                margin-bottom: 30px;
+                padding-left: 10px;
+            }
 
-        .btn-pricing {
-            background-color: #25D366;
-            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-        }
+            .benefits-list li {
+                font-size: 1rem;
+                justify-content: flex-start;
+            }
 
-        .btn-pricing:hover {
-            background-color: #128C7E;
-            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
-        }
+            .btn-pricing {
+                background-color: #25D366;
+                box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            }
 
-        .guarantee-card {
-            flex-direction: column;
-            text-align: center;
-            padding: 30px 20px;
-            gap: 20px;
-        }
+            .btn-pricing:hover {
+                background-color: #128C7E;
+                box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+            }
 
-        .guarantee-content {
-            text-align: center;
-        }
+            .guarantee-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+                gap: 20px;
+            }
 
-        .guarantee-seal img {
-            max-width: 140px;
-            margin-bottom: 10px;
-        }
+            .guarantee-content {
+                text-align: center;
+            }
 
-        .section-title h2 {
-            font-size: 2rem;
-        }
+            .guarantee-seal img {
+                max-width: 140px;
+                margin-bottom: 10px;
+            }
+
+            .section-title h2 {
+                font-size: 2rem;
+            }
         }
     </style>
 </head>
