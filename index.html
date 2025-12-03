@@ -785,222 +785,465 @@
                 <p>Veja o que nossas alunas estão dizendo sobre as receitas.</p>
             </div>
             <div class="testimonial-slider reveal">
-                <div class="testimonial-slide active">
-                    <img src="assets/testimonial1.png" alt="Depoimento 1" class="testimonial-img">
-                </div>
-                <div class="testimonial-slide">
-                    <img src="assets/testimonial2.png" alt="Depoimento 2" class="testimonial-img">
-                </div>
-                <div class="testimonial-slide">
-                    <img src="assets/testimonial3.png" alt="Depoimento 3" class="testimonial-img">
-                </div>
-                <div class="testimonial-slide">
-                    <img src="assets/testimonial4.png" alt="Depoimento 4" class="testimonial-img">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Showcase Section -->
-    <section class="showcase">
-        <div class="container">
-            <div class="section-title reveal">
-                <h2>Tenha acesso a essas e outras <span>delícias</span> por apenas
-                    <br><span>R$14,90</span>
-                </h2>
-            </div>
-            <div class="showcase-grid">
-                <!-- Cake 5: Chocolate -->
-                <div class="showcase-card reveal">
-                    <img src="assets/cake5.png" alt="Bolo de Chocolate">
-                    <p>Delicia de bolo de chocolate sem açúcar é a sugestão para o lanche</p>
-                </div>
-                <!-- Cake 2: Fruit -->
-                <div class="showcase-card reveal">
-                    <img src="assets/cake2.png" alt="Bolo de Frutas">
-                    <p>Bolo de Frutas Fit (Sem Gorduras, sem Glúten, sem Lactose e sem Açúcar)</p>
-                </div>
-                <!-- Cake 1: Cheesecake -->
-                <div class="showcase-card reveal">
-                    <img src="assets/cake1.png" alt="Cheesecake">
-                    <p>Cheesecake (Sem Glúten, sem Lactose e sem Açúcar)</p>
-                </div>
-                <!-- Cake 4: Four Milks -->
-                <div class="showcase-card reveal">
-                    <img src="assets/cake4.png" alt="Torta Quatro Leites">
-                    <p>Torta quatro leites (ZERO AÇÚCAR)</p>
-                </div>
-                <!-- Cake 3: Grandma's -->
-                <div class="showcase-card reveal">
-                    <img src="assets/cake3.png" alt="Bolo da Vovó">
-                    <p>Bolo da Vovó</p>
-                    <h2 style="color: var(--accent-color);">Sempre me perguntam..</h2>
-                </div>
-                <div class="faq-grid reveal">
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>1. Os ingredientes são caros?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p><strong>Não!</strong> Usamos ingredientes simples que você já tem em casa.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>2. O bolo realmente fica gostoso e fofinho?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Com certeza! Nossas receitas foram desenvolvidas para serem úmidas, fofinhas e
-                                deliciosas,
-                                mesmo sem glúten e sem açúcar.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>3. Eu preciso ser experiente na cozinha?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>De jeito nenhum! O passo a passo é simples e direto, perfeito até para quem nunca fez um
-                                bolo
-                                antes.</p>
-                        </div>
-                    </div>
-                    <div class="faq-item">
-                        <div class="faq-question">
-                            <h3>4. O E-book chega mesmo depois do pagamento?</h3>
-                            <i class="fas fa-chevron-down"></i>
-                        </div>
-                        <div class="faq-answer">
-                            <p>Sim! O envio é automático e imediato para o seu e-mail logo após a confirmação da compra.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="faq-cta reveal">
-                    <p>Ainda ficou com dúvidas?</p>
-                    <p class="faq-subtitle">Fale com a nossa equipe de suporte. Eles estão disponíveis para tirar todas
-                        as
-                        suas dúvidas sobre o curso.</p>
-                    <a href="#pricing" class="btn btn-secondary">QUERO AS RECEITAS AGORA</a>
-                </div>
-            </div>
-    </section>
-
-    <!-- Guarantee Section -->
-    <section class="guarantee">
-        <div class="container">
-            <div class="guarantee-card reveal">
-                <div class="guarantee-seal">
-                    <img src="assets/selo-garantia-15-dias.png" alt="Selo de Garantia 15 Dias">
-                </div>
-                <div class="guarantee-content">
-                    <h3>Experimente<br><span>Sem riscos</span></h3>
-                    <p>Satisfação garantida ou seu dinheiro de volta.</p>
-                    <p>Você tem até 15 dias para solicitar a devolução do valor pago pelo produto.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <p>&copy; 2025 Receitas Incríveis. Todos os direitos reservados.</p>
-        </div>
-    </footer>
-
-    <!-- Scripts -->
-    <script>
-        // Scroll Animation
-
-        function reveal() {
-            var reveals = document.querySelectorAll(".reveal");
-
-            for (var i = 0; i < reveals.length; i++) {
-                var windowHeight = window.innerHeight;
-                var elementTop = reveals[i].getBoundingClientRect().top;
-                var elementVisible = 150;
-
-                if (elementTop < windowHeight - elementVisible) {
-                    reveals[i].classList.add("active");
-                }
-            }
-        }
-
-        window.addEventListener("scroll", reveal);
-        // Trigger once on load
-        reveal();
-
-        // Testimonial Slider
-        let slideIndex = 0;
-        const slides = document.querySelectorAll(".testimonial-slide");
-        const prevBtn = document.querySelector(".prev-btn");
-        const nextBtn = document.querySelector(".next-btn");
-
-        function showSlides(n) {
-            if (n >= slides.length) {
-                slideIndex = 0
-            }
-
-            if (n < 0) {
-                slideIndex = slides.length - 1
-            }
-
-            slides.forEach(slide => slide.classList.remove("active"));
-            slides[slideIndex].classList.add("active");
-        }
-
-        function nextSlide() {
-            slideIndex++;
-            showSlides(slideIndex);
-        }
-
-        function prevSlide() {
-            slideIndex--;
-            showSlides(slideIndex);
-        }
-
-        if (prevBtn && nextBtn) {
-            prevBtn.addEventListener('click', prevSlide);
-            nextBtn.addEventListener('click', nextSlide);
-        }
-
-        // Auto play
-        setInterval(nextSlide, 5000);
-
-        // FAQ Accordion
-        const faqItems = document.querySelectorAll('.faq-item');
-
-        faqItems.forEach(item => {
-            const question = item.querySelector('.faq-question');
-
-            question.addEventListener('click', () => {
-
-                // Close others
-                faqItems.forEach(otherItem => {
-                    if (otherItem !== item) {
-                        otherItem.classList.remove('active');
-                        otherItem.querySelector('.faq-answer').style.maxHeight = null;
-                    }
-                });
-
-                // Toggle current
-                item.classList.toggle('active');
-                const answer = item.querySelector('.faq-answer');
-
-                if (item.classList.contains('active')) {
-                    answer.style.maxHeight = answer.scrollHeight + "px";
                 }
 
-                else {
-                    answer.style.maxHeight = null;
+                @media (max-width: 768px) {
+                .guarantee-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
                 }
-            });
-        });
-    </script>
-</body>
+
+                .guarantee-content {
+                text-align: center;
+                }
+
+                .guarantee-seal img {
+                max-width: 150px;
+                margin-bottom: 20px;
+                }
+                }
+                </style>
+                </head>
+
+                <body>
+
+                    <!-- Hero Section -->
+                    <section class="hero">
+                        <div class="container">
+                            <div class="hero-content">
+                                <div class="hero-text reveal">
+                                    <span class="hero-badge">Sem Glúten</span>
+                                    <h1>Receitas de Bolo<br><span>Para Comer Sem Culpa</span></h1>
+                                </div>
+                                <div class="hero-image reveal">
+                                    <img src="https://media.atomicatpages.net/u/6P02bGv6l7Nw26kO4JL48xk2ISr1/Pictures/SpYwRp4769772.png"
+                                        alt="Bolo Saudável Delicioso">
+                                    <div class="hero-benefits">
+                                        <div class="hero-benefit-item"><i class="fas fa-check"></i> Testadas e Aprovadas
+                                        </div>
+                                        <div class="hero-benefit-item"><i class="fas fa-check"></i> Sem leite e sem
+                                            Açúcar</div>
+                                        <div class="hero-benefit-item"><i class="fas fa-check"></i> Ingredientes
+                                            Acessíveis</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Features Section -->
+                    <section class="features">
+                        <div class="container">
+                            <div class="section-title reveal">
+                                <h2>O que você vai encontrar?</h2>
+                                <p>Receitas pensadas para o seu bem-estar sem abrir mão do sabor.</p>
+                            </div>
+                            <div class="features-grid">
+                                <div class="feature-card reveal">
+                                    <div class="feature-icon"><i class="fas fa-wheat-awn-circle-exclamation"></i></div>
+                                    <h3>Sem Glúten</h3>
+                                    <p>Receitas totalmente livres de glúten para sua segurança e leveza.</p>
+                                </div>
+                                <div class="feature-card reveal">
+                                    <div class="feature-icon"><i class="fas fa-cow"></i></div>
+                                    <h3>Sem Leite</h3>
+                                    <p>Opções deliciosas sem lactose ou proteína do leite.</p>
+                                </div>
+                                <div class="feature-card reveal">
+                                    <div class="feature-icon"><i class="fas fa-leaf"></i></div>
+                                    <h3>Sem Conservantes</h3>
+                                    <p>Tudo natural,
+                                        comida de verdade para nutrir seu corpo.</p>
+                                </div>
+                                <div class="feature-card reveal">
+                                    <div class="feature-icon"><i class="fas fa-candy-cane"></i></div>
+                                    <h3>Açúcar Opcional</h3>
+                                    <p>Você decide se quer usar ou não,
+                                        com alternativas saudáveis.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Preview Section -->
+                    <section class="preview" id="preview" style="background-color: var(--white);">
+                        <div class="container">
+                            <div class="section-title reveal">
+                                <h2>100 Receitas Inéditas</h2>
+                                <p>Com foto real e passo a passo simples. Veja algumas delícias: </p>
+                            </div>
+                            <div class="gallery">
+                                <!-- Item 1 -->
+                                <div class="gallery-item reveal">
+                                    <div class="gallery-img"> <img
+                                            src="https://media.atomicatpages.net/u/6P02bGv6l7Nw26kO4JL48xk2ISr1/Pictures/Sgmgpt5860569.jpeg"
+                                            alt="Bolo de Cenoura"> </div>
+                                    <div class="gallery-info">
+                                        <h3>Bolo de Cenoura Low Carb</h3>
+                                        <p>Fofinho e delicioso, perfeito para o café da tarde.</p>
+                                        <div class="gallery-meta"> <span><i class="far fa-clock"></i> 20 min</span>
+                                            <span><i class="fas fa-fire"></i> 120 kcal</span> </div>
+                                    </div>
+                                </div>
+                                <!-- Item 2 -->
+                                <div class="gallery-item reveal">
+                                    <div class="gallery-img"> <img
+                                            src="https://media.atomicatpages.net/u/6P02bGv6l7Nw26kO4JL48xk2ISr1/Pictures/nQPDqy1062597.jpeg"
+                                            alt="Bolo Indiano"> </div>
+                                    <div class="gallery-info">
+                                        <h3>Bolo Indiano</h3>
+                                        <p>Uma explosão de especiarias sem glúten.</p>
+                                        <div class="gallery-meta"> <span><i class="far fa-clock"></i> 20 min</span>
+                                            <span><i class="fas fa-fire"></i> 90 kcal</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Item 3 -->
+                                <div class="gallery-item reveal">
+                                    <div class="gallery-img"> <img
+                                            src="https://media.atomicatpages.net/u/6P02bGv6l7Nw26kO4JL48xk2ISr1/Pictures/PWavaf2196277.webp"
+                                            alt="Bolo de Banana"> </div>
+                                    <div class="gallery-info">
+                                        <h3>Bolo de Banana</h3>
+                                        <p>Feito na frigideira, prático e rápido.</p>
+                                        <div class="gallery-meta"> <span><i class="far fa-clock"></i> 20 min</span>
+                                            <span><i class="fas fa-fire"></i> 106 kcal</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="text-align: center; margin-top: 50px;" class="reveal"> <a href="#pricing"
+                                    class="btn">Ver Todas
+                                    as Receitas</a> </div>
+                        </div>
+                    </section>
+
+                    <!-- Bonus Section -->
+                    <section class="bonus" style="background-color: var(--white); padding: 100px 0;">
+                        <div class="container">
+                            <div class="section-title reveal">
+                                <h2>Bônus Exclusivos</h2>
+                                <p>Além das 100 receitas, você leva esses presentes especiais:</p>
+                            </div>
+                            <div class="gallery">
+                                <!-- Bonus Item 1 -->
+                                <div class="gallery-item reveal" style="border: 2px solid var(--accent-color);">
+                                    <div class="gallery-img"> <img
+                                            src="https://media.atomicatpages.net/u/6P02bGv6l7Nw26kO4JL48xk2ISr1/Pictures/oYGIQB6356860.webp"
+                                            alt="Bolo de Limão"> </div>
+                                    <div class="gallery-info"> <span
+                                            style="background: var(--accent-color); color: var(--primary-color); padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">Bônus
+                                            #1</span>
+                                        <h3 style="margin-top: 10px;">Bolo de Limão Low Carb</h3>
+                                        <p>Refrescante, feito no liquidificador.</p>
+                                        <div class="gallery-meta"> <span><i class="far fa-clock"></i> 20 min</span>
+                                            <span><i class="fas fa-fire"></i> 100 kcal</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Bonus Item 2 -->
+                                <div class="gallery-item reveal" style="border: 2px solid var(--accent-color);">
+                                    <div class="gallery-img"> <img
+                                            src="https://media.atomicatpages.net/u/6P02bGv6l7Nw26kO4JL48xk2ISr1/Pictures/xLHoJu2883918.webp"
+                                            alt="Bolo Formigueiro"> </div>
+                                    <div class="gallery-info"> <span
+                                            style="background: var(--accent-color); color: var(--primary-color); padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">Bônus
+                                            #2</span>
+                                        <h3 style="margin-top: 10px;">Bolo Formigueiro</h3>
+                                        <p>Apenas 5 ingredientes. Simples e delicioso.</p>
+                                        <div class="gallery-meta"> <span><i class="far fa-clock"></i> 20 min</span>
+                                            <span><i class="fas fa-fire"></i> 108 kcal</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Bonus Item 3 -->
+                                <div class="gallery-item reveal" style="border: 2px solid var(--accent-color);">
+                                    <div class="gallery-img"> <img
+                                            src="https://media.atomicatpages.net/u/6P02bGv6l7Nw26kO4JL48xk2ISr1/Pictures/mRrDkb2829169.webp"
+                                            alt="Bolo de Pistache"> </div>
+                                    <div class="gallery-info"> <span
+                                            style="background: var(--accent-color); color: var(--primary-color); padding: 5px 10px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; text-transform: uppercase;">Bônus
+                                            #3</span>
+                                        <h3 style="margin-top: 10px;">Bolo de Pistache</h3>
+                                        <p>Super rápido e sofisticado.</p>
+                                        <div class="gallery-meta"> <span><i class="far fa-clock"></i> 19
+                                                min</span> <span><i class="fas fa-fire"></i> 105 kcal</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Testimonials Section -->
+                    <section class="testimonials">
+                        <div class="container">
+                            <div class="section-title reveal">
+                                <h2>Quem provou, aprovou !</h2>
+                                <p>Veja o que nossas alunas estão dizendo sobre as receitas.</p>
+                            </div>
+                            <div class="testimonial-slider reveal">
+                                <div class="testimonial-slide active">
+                                    <img src="assets/testimonial1.png" alt="Depoimento 1" class="testimonial-img">
+                                </div>
+                                <div class="testimonial-slide">
+                                    <img src="assets/testimonial2.png" alt="Depoimento 2" class="testimonial-img">
+                                </div>
+                                <div class="testimonial-slide">
+                                    <img src="assets/testimonial3.png" alt="Depoimento 3" class="testimonial-img">
+                                </div>
+                                <div class="testimonial-slide">
+                                    <img src="assets/testimonial4.png" alt="Depoimento 4" class="testimonial-img">
+                                </div>
+                            </div>
+                            <button class="prev-btn">&#10094;</button>
+                            <button class="next-btn">&#10095;</button>
+                        </div>
+                    </section>
+
+                    <!-- Showcase Section -->
+                    <section class="showcase">
+                        <div class="container">
+                            <div class="section-title reveal">
+                                <h2>Tenha acesso a essas e outras <span>delícias</span> por apenas
+                                    <br><span>R$14,90</span>
+                                </h2>
+                            </div>
+                            <div class="showcase-grid">
+                                <!-- Cake 5: Chocolate -->
+                                <div class="showcase-card reveal">
+                                    <img src="assets/cake5.png" alt="Bolo de Chocolate">
+                                    <p>Delicia de bolo de chocolate sem açúcar é a sugestão para o lanche</p>
+                                </div>
+                                <!-- Cake 2: Fruit -->
+                                <div class="showcase-card reveal">
+                                    <img src="assets/cake2.png" alt="Bolo de Frutas">
+                                    <p>Bolo de Frutas Fit (Sem Gorduras, sem Glúten, sem Lactose e sem Açúcar)</p>
+                                </div>
+                                <!-- Cake 1: Cheesecake -->
+                                <div class="showcase-card reveal">
+                                    <img src="assets/cake1.png" alt="Cheesecake">
+                                    <p>Cheesecake (Sem Glúten, sem Lactose e sem Açúcar)</p>
+                                </div>
+                                <!-- Cake 4: Four Milks -->
+                                <div class="showcase-card reveal">
+                                    <img src="assets/cake4.png" alt="Torta Quatro Leites">
+                                    <p>Torta quatro leites (ZERO AÇÚCAR)</p>
+                                </div>
+                                <!-- Cake 3: Grandma's -->
+                                <div class="showcase-card reveal">
+                                    <img src="assets/cake3.png" alt="Bolo da Vovó">
+                                    <p>Bolo da Vovó</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Pricing Section -->
+                    <section class="pricing" id="pricing">
+                        <div class="container">
+                            <div class="pricing-card reveal">
+                                <div class="badge-best-seller">Mais Vendido</div>
+                                <div class="pricing-image">
+                                    <img src="mockup_ebooks.png" alt="Pacote Completo de Receitas">
+                                </div>
+                                <div class="pricing-info">
+                                    <p class="pricing-sub">Tudo o que você precisa para comer bem sem sair da dieta.</p>
+                                    <ul class="benefits-list">
+                                        <li><i class="fas fa-check-circle"></i> 100 Receitas Testadas</li>
+                                        <li><i class="fas fa-check-circle"></i> Sem Glúten e Sem Açúcar</li>
+                                        <li><i class="fas fa-check-circle"></i> Receitas fáceis</li>
+                                        <li><i class="fas fa-check-circle"></i> 3 Bônus Exclusivos</li>
+                                    </ul>
+                                    <div class="price-container">
+                                        <!-- <span class="price-old">R$ 97,00</span> -->
+                                        <div class="price-tag">R$14,90</div>
+                                    </div>
+                                    <a href="https://pay.cakto.com.br/3e48fg9_673711" class="btn-pricing">COMPRAR
+                                        AGORA</a>
+                                    <p class="secure-text">Acesso Imediato &bull; Compra Segura</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- FAQ Section -->
+                    <section class="faq">
+                        <div class="container">
+                            <div class="section-title reveal">
+                                <h2 style="color: var(--accent-color);">Sempre me perguntam..</h2>
+                            </div>
+                            <div class="faq-grid reveal">
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <h3>1. Os ingredientes são caros?</h3>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p><strong>Não!</strong> Usamos ingredientes simples que você já tem em casa.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <h3>2. O bolo realmente fica gostoso e fofinho?</h3>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>Com certeza! Nossas receitas foram desenvolvidas para serem úmidas, fofinhas
+                                            e
+                                            deliciosas,
+                                            mesmo sem glúten e sem açúcar.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <h3>3. Eu preciso ser experiente na cozinha?</h3>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>De jeito nenhum! O passo a passo é simples e direto, perfeito até para quem
+                                            nunca fez um
+                                            bolo
+                                            antes.</p>
+                                    </div>
+                                </div>
+                                <div class="faq-item">
+                                    <div class="faq-question">
+                                        <h3>4. O E-book chega mesmo depois do pagamento?</h3>
+                                        <i class="fas fa-chevron-down"></i>
+                                    </div>
+                                    <div class="faq-answer">
+                                        <p>Sim! O envio é automático e imediato para o seu e-mail logo após a
+                                            confirmação da compra.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="faq-cta reveal">
+                                <p>Ainda ficou com dúvidas?</p>
+                                <p class="faq-subtitle">Fale com a nossa equipe de suporte. Eles estão disponíveis para
+                                    tirar todas
+                                    as
+                                    suas dúvidas sobre o curso.</p>
+                                <a href="#pricing" class="btn btn-secondary">QUERO AS RECEITAS AGORA</a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Guarantee Section -->
+                    <section class="guarantee">
+                        <div class="container">
+                            <div class="guarantee-card reveal">
+                                <div class="guarantee-seal">
+                                    <img src="assets/selo-garantia-15-dias.png" alt="Selo de Garantia 15 Dias">
+                                </div>
+                                <div class="guarantee-content">
+                                    <h3>Experimente<br><span>Sem riscos</span></h3>
+                                    <p>Satisfação garantida ou seu dinheiro de volta.</p>
+                                    <p>Você tem até 15 dias para solicitar a devolução do valor pago pelo produto.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- Footer -->
+                    <footer>
+                        <div class="container">
+                            <p>&copy; 2025 Receitas Incríveis. Todos os direitos reservados.</p>
+                        </div>
+                    </footer>
+
+                    <!-- Scripts -->
+                    <script>
+                        // Scroll Animation
+
+                        function reveal() {
+                            var reveals = document.querySelectorAll(".reveal");
+
+                            for (var i = 0; i < reveals.length; i++) {
+                                var windowHeight = window.innerHeight;
+                                var elementTop = reveals[i].getBoundingClientRect().top;
+                                var elementVisible = 150;
+
+                                if (elementTop < windowHeight - elementVisible) {
+                                    reveals[i].classList.add("active");
+                                }
+                            }
+                        }
+
+                        window.addEventListener("scroll", reveal);
+                        // Trigger once on load
+                        reveal();
+
+                        // Testimonial Slider
+                        let slideIndex = 0;
+                        const slides = document.querySelectorAll(".testimonial-slide");
+                        const prevBtn = document.querySelector(".prev-btn");
+                        const nextBtn = document.querySelector(".next-btn");
+
+                        function showSlides(n) {
+                            if (n >= slides.length) {
+                                slideIndex = 0
+                            }
+
+                            if (n < 0) {
+                                slideIndex = slides.length - 1
+                            }
+
+                            slides.forEach(slide => slide.classList.remove("active"));
+                            slides[slideIndex].classList.add("active");
+                        }
+
+                        function nextSlide() {
+                            slideIndex++;
+                            showSlides(slideIndex);
+                        }
+
+                        function prevSlide() {
+                            slideIndex--;
+                            showSlides(slideIndex);
+                        }
+
+                        if (prevBtn && nextBtn) {
+                            prevBtn.addEventListener('click', prevSlide);
+                            nextBtn.addEventListener('click', nextSlide);
+                        }
+
+                        // Auto play
+                        setInterval(nextSlide, 5000);
+
+                        // FAQ Accordion
+                        const faqItems = document.querySelectorAll('.faq-item');
+
+                        faqItems.forEach(item => {
+                            const question = item.querySelector('.faq-question');
+
+                            question.addEventListener('click', () => {
+
+                                // Close others
+                                faqItems.forEach(otherItem => {
+                                    if (otherItem !== item) {
+                                        otherItem.classList.remove('active');
+                                        otherItem.querySelector('.faq-answer').style.maxHeight = null;
+                                    }
+                                });
+
+                                // Toggle current
+                                item.classList.toggle('active');
+                                const answer = item.querySelector('.faq-answer');
+
+                                if (item.classList.contains('active')) {
+                                    answer.style.maxHeight = answer.scrollHeight + "px";
+                                }
+
+                                else {
+                                    answer.style.maxHeight = null;
+                                }
+                            });
+                        });
+                    </script>
+                </body>
 
 </html>
