@@ -705,297 +705,45 @@
 
 
 
-        /* Guarantee Section */
-        .guarantee {
-            padding: 80px 0;
-            background-color: var(--light-bg);
-        }
-
-        .guarantee-card {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 40px;
-            border-radius: var(--radius);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            max-width: 900px;
-            margin: 0 auto;
-            display: flex;
-            overflow: hidden;
-            position: relative;
-            border: 2px solid var(--accent-color);
-        }
-
-        .badge-best-seller {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background-color: var(--accent-color);
-            color: var(--primary-color);
-            padding: 8px 16px;
-            border-radius: 50px;
-            font-weight: 700;
-            text-transform: uppercase;
-            font-size: 0.9rem;
-            z-index: 10;
-            box-shadow: 0 4px 10px rgba(255, 187, 0, 0.4);
-        }
-
-        .pricing-image {
-            flex: 1;
-            background-color: #f9f9f9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 40px;
-        }
-
-        .pricing-info {
-            flex: 1.2;
-            padding: 50px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-        }
-
-        .pricing-sub {
-            font-size: 1.2rem;
-            color: #666;
-            margin-bottom: 30px;
-        }
-
         .benefits-list {
-            list-style: none;
             margin-bottom: 30px;
+            padding-left: 10px;
         }
 
         .benefits-list li {
-            margin-bottom: 15px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            font-size: 1.1rem;
-            color: var(--text-color);
-        }
-
-        .benefits-list li i {
-            color: var(--secondary-color);
-            font-size: 1.2rem;
-        }
-
-        .price-container {
-            margin-bottom: 30px;
-            display: flex;
-            align-items: baseline;
-            gap: 15px;
-        }
-
-        .price-old {
-            text-decoration: line-through;
-            color: #999;
-            font-size: 1.2rem;
-        }
-
-        .price-tag {
-            font-size: 3.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            justify-content: flex-start;
         }
 
         .btn-pricing {
-            display: block;
-            width: 100%;
-            text-align: center;
-            background-color: var(--primary-color);
-            color: var(--white);
-            padding: 20px;
-            border-radius: var(--radius);
-            font-size: 1.2rem;
-            font-weight: 700;
-            text-transform: uppercase;
-            transition: var(--transition);
-            box-shadow: 0 10px 20px rgba(106, 51, 33, 0.3);
+            background-color: #25D366;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
         }
 
         .btn-pricing:hover {
-            background-color: var(--secondary-color);
-            transform: translateY(-3px);
-            box-shadow: 0 15px 30px rgba(137, 166, 135, 0.4);
+            background-color: #128C7E;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
         }
 
-        .secure-text {
+        .guarantee-card {
+            flex-direction: column;
             text-align: center;
-            margin-top: 15px;
-            font-size: 0.9rem;
-            color: #888;
+            padding: 30px 20px;
+            gap: 20px;
         }
 
-        /* Footer */
-        footer {
-            background-color: var(--primary-color);
-
+        .guarantee-content {
+            text-align: center;
         }
 
-        /* Responsive Design */
-        @media (max-width: 992px) {
-            .hero-text h1 {
-                font-size: 3rem;
-            }
-
-            .pricing-card {
-                flex-direction: column;
-                max-width: 550px;
-            }
-
-            .pricing-image {
-                padding: 30px;
-            }
-
-            .pricing-info {
-                padding: 30px;
-            }
+        .guarantee-seal img {
+            max-width: 140px;
+            margin-bottom: 10px;
         }
 
-        @media (max-width: 768px) {
-            .container {
-                width: 92%;
-                padding: 0 15px;
-            }
-
-            .hero {
-                padding-top: 100px;
-                text-align: center;
-            }
-
-            .hero-content {
-                flex-direction: column;
-            }
-
-            .hero-text h1 {
-                font-size: 2.2rem;
-            }
-
-            .hero-text h1 span {
-                font-size: 1.6rem;
-            }
-
-            .features-grid,
-            .gallery,
-            .showcase-grid {
-                grid-template-columns: 1fr;
-                gap: 20px;
-            }
-
-            .author-content {
-                flex-direction: column;
-                text-align: center;
-                padding: 30px 20px;
-            }
-
-            .author-img {
-                max-width: 100%;
-            }
-
-            .testimonial-slider {
-                padding: 30px 15px;
-            }
-
-            /* Pricing Mobile Optimization */
-            .pricing-card {
-                padding: 0;
-                border-width: 1px;
-                display: flex;
-                flex-direction: column;
-            }
-
-            .pricing-image {
-                padding: 0;
-                background-color: transparent;
-                width: 100%;
-                display: block;
-            }
-
-            .pricing-image img {
-                width: 100%;
-                height: auto;
-                display: block;
-                max-width: 350px;
-                margin: 0 auto;
-                margin-top: 40px;
-            }
-
-            .pricing-info {
-                padding: 20px 25px 35px;
-            }
-
-            .badge-best-seller {
-                top: 20px;
-                right: 50%;
-                transform: translateX(50%);
-                font-size: 0.8rem;
-                padding: 8px 20px;
-                width: max-content;
-            }
-
-            .price-tag {
-                font-size: 3.5rem;
-                text-align: center;
-                display: block;
-                width: 100%;
-                margin-bottom: 10px;
-            }
-
-            .price-container {
-                justify-content: center;
-                margin-bottom: 20px;
-            }
-
-            .pricing-sub {
-                font-size: 1.1rem;
-                margin-bottom: 25px;
-                text-align: center;
-            }
-
-            .benefits-list {
-                margin-bottom: 30px;
-                padding-left: 10px;
-            }
-
-            .benefits-list li {
-                font-size: 1rem;
-                justify-content: flex-start;
-            }
-
-            .btn-pricing {
-                background-color: #25D366;
-                box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
-            }
-
-            .btn-pricing:hover {
-                background-color: #128C7E;
-                box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
-            }
-
-            .guarantee-card {
-                flex-direction: column;
-                text-align: center;
-                padding: 30px 20px;
-                gap: 20px;
-            }
-
-            .guarantee-content {
-                text-align: center;
-            }
-
-            .guarantee-seal img {
-                max-width: 140px;
-                margin-bottom: 10px;
-            }
-
-            .section-title h2 {
-                font-size: 2rem;
-            }
+        .section-title h2 {
+            font-size: 2rem;
+        }
         }
     </style>
 </head>
@@ -1259,6 +1007,7 @@
                     </div>
                     <a href="https://pay.cakto.com.br/3e48fg9_673711" class="btn-pricing">COMPRAR AGORA</a>
                     <p class="secure-text">Acesso Imediato &bull; Compra Segura</p>
+                    <p class="secure-text">Acesso Imediato &bull; Compra Segura</p>
                 </div>
             </div>
         </div>
@@ -1325,10 +1074,10 @@
     </section>
 
     <!-- Guarantee Section -->
-    <section class="guarantee section-dark">
+    <section class="guarantee">
         <div class="container">
-            <div class="guarantee-card reveal card-dark"
-                style="border: none; box-shadow: none; flex-direction: column; text-align: center;">
+            <div class="guarantee-card reveal"
+                style="background-color: #3e1e15; color: #fff; border: none; box-shadow: none; flex-direction: column; text-align: center;">
                 <div class="guarantee-seal">
                     <img src="assets/selo-garantia-15-dias.png" alt="Selo de Garantia 15 Dias"
                         style="max-width: 150px;">
@@ -1348,7 +1097,7 @@
     <footer class="section-dark" style="padding: 40px 0; border-top: 1px solid #5c3a32;">
         <div class="container" style="text-align: center; font-size: 0.8rem; line-height: 1.6;">
             <p>021 ©Copyright © 2023 Bolos Sem Glúten. Todos os direitos reservados. Todo o conteúdo do site, todas as
-                fotos, imagens, logotipos, marcas, layout, aqui veiculados são de propriedade exclusiva da your company
+                fotos, imagens, logotipos, marcas, layout, aqui veiculados sÃ£o de propriedade exclusiva da your company
                 name É vedada qualquer reprodução, total ou parcial, de qualquer elemento de identidade, sem expressa
                 autorização. A violação de qualquer direito mencionado implicará na responsabilização cível e criminal
                 nos termos da Lei. Informamos que your company name é um tratamento. Seu resultado pode variar de pessoa
