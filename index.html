@@ -608,6 +608,215 @@
                 margin-bottom: 20px;
             }
         }
+
+        /* Pricing Section */
+        .pricing {
+            padding: 100px 0;
+            background: linear-gradient(135deg, #fff8e1 0%, #ffffff 100%);
+        }
+
+        .pricing-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            overflow: hidden;
+            position: relative;
+            border: 2px solid var(--accent-color);
+        }
+
+        .badge-best-seller {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 8px 16px;
+            border-radius: 50px;
+            font-weight: 700;
+            text-transform: uppercase;
+            font-size: 0.9rem;
+            z-index: 10;
+            box-shadow: 0 4px 10px rgba(255, 187, 0, 0.4);
+        }
+
+        .pricing-image {
+            flex: 1;
+            background-color: #f9f9f9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 40px;
+        }
+
+        .pricing-info {
+            flex: 1.2;
+            padding: 50px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .pricing-sub {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .benefits-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .benefits-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1.1rem;
+            color: var(--text-color);
+        }
+
+        .benefits-list li i {
+            color: var(--secondary-color);
+            font-size: 1.2rem;
+        }
+
+        .price-container {
+            margin-bottom: 30px;
+            display: flex;
+            align-items: baseline;
+            gap: 15px;
+        }
+
+        .price-old {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 1.2rem;
+        }
+
+        .price-tag {
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            font-family: 'Playfair Display', serif;
+        }
+
+        .btn-pricing {
+            display: block;
+            width: 100%;
+            text-align: center;
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 20px;
+            border-radius: var(--radius);
+            font-size: 1.2rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            transition: var(--transition);
+            box-shadow: 0 10px 20px rgba(106, 51, 33, 0.3);
+        }
+
+        .btn-pricing:hover {
+            background-color: var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 15px 30px rgba(137, 166, 135, 0.4);
+        }
+
+        .secure-text {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 40px 0;
+        }
+
+        footer p {
+            opacity: 0.8;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 992px) {
+            .hero-text h1 {
+                font-size: 3rem;
+            }
+
+            .pricing-card {
+                flex-direction: column;
+                max-width: 500px;
+            }
+
+            .pricing-image {
+                padding: 30px;
+            }
+
+            .pricing-info {
+                padding: 30px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero {
+                padding-top: 100px;
+                text-align: center;
+            }
+
+            .hero-content {
+                flex-direction: column;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-text h1 span {
+                font-size: 1.8rem;
+            }
+
+            .features-grid,
+            .gallery,
+            .showcase-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .author-content {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px;
+            }
+
+            .author-img {
+                max-width: 100%;
+            }
+
+            .testimonial-slider {
+                padding: 30px 20px;
+            }
+
+            .guarantee-card {
+                flex-direction: column;
+                text-align: center;
+                padding: 30px 20px;
+            }
+
+            .guarantee-content {
+                text-align: center;
+            }
+
+            .guarantee-seal img {
+                max-width: 150px;
+                margin-bottom: 20px;
+            }
+        }
     </style>
 </head>
 
@@ -883,7 +1092,8 @@
                                         <h3>Bolo de Cenoura Low Carb</h3>
                                         <p>Fofinho e delicioso, perfeito para o café da tarde.</p>
                                         <div class="gallery-meta"> <span><i class="far fa-clock"></i> 20 min</span>
-                                            <span><i class="fas fa-fire"></i> 120 kcal</span> </div>
+                                            <span><i class="fas fa-fire"></i> 120 kcal</span>
+                                        </div>
                                     </div>
                                 </div>
                                 <!-- Item 2 -->
