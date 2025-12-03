@@ -673,75 +673,22 @@
             color: #888;
         }
 
-        padding: 100px 0;
-        background-color: var(--light-bg);
+        /* Dark Theme Utilities */
+        .section-dark {
+            background-color: #3e1e15;
+            color: #fff;
         }
 
-        .faq-grid {
-            max-width: 800px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
+        .card-dark {
+            background-color: #4a2c25;
+            border: 1px solid #5c3a32;
         }
 
-        .faq-item {
-            background: var(--white);
-            border-radius: var(--radius);
-            box-shadow: var(--shadow);
-            overflow: hidden;
+        .text-accent {
+            color: var(--accent-color);
         }
 
-        .faq-question {
-            padding: 20px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            cursor: pointer;
-            background: var(--white);
-            transition: var(--transition);
-        }
 
-        .faq-question h3 {
-            font-size: 1.1rem;
-            margin: 0;
-            color: var(--text-color);
-            font-weight: 600;
-        }
-
-        .faq-question i {
-            transition: var(--transition);
-            color: var(--primary-color);
-        }
-
-        .faq-item.active .faq-question {
-            background: #fff8e1;
-        }
-
-        .faq-item.active .faq-question i {
-            transform: rotate(180deg);
-        }
-
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.3s ease-out;
-            padding: 0 20px;
-        }
-
-        .faq-answer p {
-            padding-bottom: 20px;
-            color: #666;
-            line-height: 1.6;
-        }
-
-        .faq-cta .faq-subtitle {
-            font-size: 1rem;
-            font-weight: 400;
-            color: #ccc;
-            max-width: 600px;
-            margin: 0 auto 30px;
-        }
 
         /* Guarantee Section */
         .guarantee {
@@ -1291,7 +1238,8 @@
                         <li><i class="fas fa-check-circle"></i> 3 Bônus Exclusivos</li>
                     </ul>
                     <div class="price-container" style="justify-content: center; margin-bottom: 20px;">
-                        <div style="border: 2px solid var(--accent-color); padding: 15px 40px; border-radius: 50px; display: inline-block; background-color: rgba(255, 187, 0, 0.05);">
+                        <div
+                            style="">
                             <div class="price-tag" style="margin-bottom: 0; line-height: 1;">R$14,90</div>
                         </div>
                     </div>
@@ -1303,14 +1251,14 @@
     </section>
 
     <!-- FAQ Section -->
-    <section class="faq" style="background-color: #3e1e15; color: #fff;">
+    <section class="faq section-dark">
         <div class="container">
             <div class="section-title reveal">
-                <h2 style="color: var(--accent-color);">Sempre me perguntam..</h2>
+                <h2 class="text-accent">Sempre me perguntam..</h2>
             </div>
             <div class="faq-grid reveal">
-                <div class="faq-item" style="background-color: #4a2c25; border: 1px solid #5c3a32;">
-                    <div class="faq-question" style="background-color: #4a2c25; color: #fff;">
+                <div class="faq-item card-dark">
+                    <div class="faq-question card-dark" style="border: none;">
                         <h3 style="color: #fff;">1. Os ingredientes são caros?</h3><i class="fas fa-chevron-down"
                             style="color: #fff;"></i>
                     </div>
@@ -1319,8 +1267,8 @@
                             casa.</p>
                     </div>
                 </div>
-                <div class="faq-item" style="background-color: #4a2c25; border: 1px solid #5c3a32;">
-                    <div class="faq-question" style="background-color: #4a2c25; color: #fff;">
+                <div class="faq-item card-dark">
+                    <div class="faq-question card-dark" style="border: none;">
                         <h3 style="color: #fff;">2. O bolo realmente fica gostoso e fofinho?</h3><i
                             class="fas fa-chevron-down" style="color: #fff;"></i>
                     </div>
@@ -1329,8 +1277,8 @@
                             fofinhas e deliciosas, mesmo sem glúten e sem açúcar.</p>
                     </div>
                 </div>
-                <div class="faq-item" style="background-color: #4a2c25; border: 1px solid #5c3a32;">
-                    <div class="faq-question" style="background-color: #4a2c25; color: #fff;">
+                <div class="faq-item card-dark">
+                    <div class="faq-question card-dark" style="border: none;">
                         <h3 style="color: #fff;">3. Eu preciso ser experiente na cozinha?</h3><i
                             class="fas fa-chevron-down" style="color: #fff;"></i>
                     </div>
@@ -1339,8 +1287,8 @@
                             quem nunca fez um bolo antes.</p>
                     </div>
                 </div>
-                <div class="faq-item" style="background-color: #4a2c25; border: 1px solid #5c3a32;">
-                    <div class="faq-question" style="background-color: #4a2c25; color: #fff;">
+                <div class="faq-item card-dark">
+                    <div class="faq-question card-dark" style="border: none;">
                         <h3 style="color: #fff;">4. O E-book chega mesmo depois do pagamento?</h3><i
                             class="fas fa-chevron-down" style="color: #fff;"></i>
                     </div>
@@ -1363,10 +1311,10 @@
     </section>
 
     <!-- Guarantee Section -->
-    <section class="guarantee" style="background-color: #3e1e15; padding-top: 0;">
+    <section class="guarantee section-dark" style="padding-top: 0;">
         <div class="container">
-            <div class="guarantee-card reveal"
-                style="background-color: #4a2c25; border: none; box-shadow: none; flex-direction: column; text-align: center;">
+            <div class="guarantee-card reveal card-dark"
+                style="border: none; box-shadow: none; flex-direction: column; text-align: center;">
                 <div class="guarantee-seal">
                     <img src="assets/selo-garantia-15-dias.png" alt="Selo de Garantia 15 Dias"
                         style="max-width: 150px;">
@@ -1383,7 +1331,7 @@
     </section>
 
     <!-- Footer -->
-    <footer style="background-color: #3e1e15; color: #888; padding: 40px 0; border-top: 1px solid #5c3a32;">
+    <footer class="section-dark" style="padding: 40px 0; border-top: 1px solid #5c3a32;">
         <div class="container" style="text-align: center; font-size: 0.8rem; line-height: 1.6;">
             <p>021 ©Copyright © 2023 Bolos Sem Glúten. Todos os direitos reservados. Todo o conteúdo do site, todas as
                 fotos, imagens, logotipos, marcas, layout, aqui veiculados são de propriedade exclusiva da your company
