@@ -539,52 +539,6 @@
             line-height: 1.6;
         }
 
-        .faq-cta {
-            text-align: center;
-            margin-top: 50px;
-        }
-
-        /* Pricing/CTA Section */
-        .pricing {
-            padding: 100px 0;
-            text-align: center;
-            background-color: var(--white);
-            color: var(--text-color);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .pricing::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0.1;
-        }
-
-        .pricing-content {
-            position: relative;
-            z-index: 1;
-        }
-
-        .price-tag {
-            font-size: 3rem;
-            font-weight: 800;
-            color: var(--primary-color);
-            margin: 20px 0;
-            font-family: 'Playfair Display', serif;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
-            letter-spacing: -2px;
-        }
-
-        .price-sub {
-            font-size: 1.2rem;
-            opacity: 0.9;
-            margin-bottom: 40px;
-        }
-
         .faq-cta .faq-subtitle {
             font-size: 1rem;
             font-weight: 400;
@@ -880,90 +834,59 @@
                 <div class="showcase-card reveal">
                     <img src="assets/cake3.png" alt="Bolo da Vovó">
                     <p>Bolo da Vovó</p>
+                    <h2 style="color: var(--accent-color);">Sempre me perguntam..</h2>
+                </div>
+                <div class="faq-grid reveal">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>1. Os ingredientes são caros?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p><strong>Não!</strong> Usamos ingredientes simples que você já tem em casa.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>2. O bolo realmente fica gostoso e fofinho?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Com certeza! Nossas receitas foram desenvolvidas para serem úmidas, fofinhas e
+                                deliciosas,
+                                mesmo sem glúten e sem açúcar.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>3. Eu preciso ser experiente na cozinha?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>De jeito nenhum! O passo a passo é simples e direto, perfeito até para quem nunca fez um
+                                bolo
+                                antes.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            <h3>4. O E-book chega mesmo depois do pagamento?</h3>
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p>Sim! O envio é automático e imediato para o seu e-mail logo após a confirmação da compra.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq-cta reveal">
+                    <p>Ainda ficou com dúvidas?</p>
+                    <p class="faq-subtitle">Fale com a nossa equipe de suporte. Eles estão disponíveis para tirar todas
+                        as
+                        suas dúvidas sobre o curso.</p>
+                    <a href="#pricing" class="btn btn-secondary">QUERO AS RECEITAS AGORA</a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Pricing Section -->
-    <section class="pricing" id="pricing">
-        <div class="container">
-            <div class="pricing-card reveal">
-                <div class="pricing-image">
-                    <img src="mockup_ebooks.png" alt="Pacote Completo de Receitas">
-                </div>
-                <div class="pricing-info">
-                    <p class="pricing-sub">Tudo o que você precisa para comer bem sem sair da dieta.</p>
-                    <ul class="benefits-list">
-                        <li><i class="fas fa-check-circle"></i> 100 Receitas Testadas</li>
-                        <li><i class="fas fa-check-circle"></i> Sem Glúten e Sem Açúcar</li>
-                        <li><i class="fas fa-check-circle"></i> Receitas fáceis</li>
-                        <li><i class="fas fa-check-circle"></i> 3 Bônus Exclusivos</li>
-                    </ul>
-                    <div class="price-container">
-                        <!-- <span class="price-old">R$ 97,00</span> -->
-                        <div class="price-tag">R$14,90</div>
-                    </div>
-                    <a href="https://pay.cakto.com.br/3e48fg9_673711" class="btn-pricing">COMPRAR AGORA</a>
-                    <p class="secure-text">Acesso Imediato &bull; Compra Segura</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq">
-        <div class="container">
-            <div class="section-title reveal">
-                <h2 style="color: var(--accent-color);">Sempre me perguntam..</h2>
-            </div>
-            <div class="faq-grid reveal">
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>1. Os ingredientes são caros?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p><strong>Não!</strong> Usamos ingredientes simples que você já tem em casa.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>2. O bolo realmente fica gostoso e fofinho?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Com certeza! Nossas receitas foram desenvolvidas para serem úmidas, fofinhas e deliciosas,
-                            mesmo sem glúten e sem açúcar.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>3. Eu preciso ser experiente na cozinha?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>De jeito nenhum! O passo a passo é simples e direto, perfeito até para quem nunca fez um bolo
-                            antes.</p>
-                    </div>
-                </div>
-                <div class="faq-item">
-                    <div class="faq-question">
-                        <h3>4. O E-book chega mesmo depois do pagamento?</h3>
-                        <i class="fas fa-chevron-down"></i>
-                    </div>
-                    <div class="faq-answer">
-                        <p>Sim! O envio é automático e imediato para o seu e-mail logo após a confirmação da compra.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="faq-cta reveal">
-                <p>Ainda ficou com dúvidas?</p>
-                <p class="faq-subtitle">Fale com a nossa equipe de suporte. Eles estão disponíveis para tirar todas as
-                    suas dúvidas sobre o curso.</p>
-                <a href="#pricing" class="btn btn-secondary">QUERO AS RECEITAS AGORA</a>
-            </div>
-        </div>
     </section>
 
     <!-- Guarantee Section -->
